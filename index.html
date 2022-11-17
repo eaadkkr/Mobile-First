@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forside | Brdr. Schmidt Vinhandel </title>
+
+    <!-- Tab ikon -->
+    <link rel="icon" type="image/x-icon" href="img/tab_ikon.png">
+
+    <!-- Fonte og ikoner (findes på google: google material icon) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+</head>
+
+
+<!------------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------------->
+
+<body>
+
+
+    <!------------------------------------------------------------------------
+BURGERMENU - https://alvarotrigo.com/blog/hamburger-menu-css/ (nr. 11)
+------------------------------------------------------------------------->
+    <header>
+        <!-------------------------------Burger streger-------------------------->
+
+        <nav class="burgermenu">
+            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+            <label class="m-menu__toggle" for="menu">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="butt"
+                    stroke-linejoin="arcs">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+            <label class="m-menu__overlay" for="menu"></label>
+
+            <!---------------------------------- Find os i header til pc --------------------------->
+            <div class="header_find_os">
+                <p class="header_find_os_tekst">
+                    <i class="material-icons" id="ikon_locationon_top">location_on</i>
+                    <a href="https://www.google.com/maps/place/Brdr.+Schmidt+Vinhandel/@56.1309015,10.1538207,15z/data=!4m9!1m2!2m1!1sbrdr+schmidt+vinhandel!3m5!1s0x464c401cf449969b:0xd0b5270e65a5656f!8m2!3d56.1292704!4d10.162014!15sChZicmRyIHNjaG1pZHQgdmluaGFuZGVsWhgiFmJyZHIgc2NobWlkdCB2aW5oYW5kZWySAQp3aW5lX3N0b3Jl4AEA"
+                        class="header_find_os_tekst">Find os i Viby Centret</a>
+                </p>
+            </div>
+
+            <!----------------------------------google ikoner i navbar--------------------------->
+            <a href="index.html" class="logo"><img src="img/logo.jpg" alt="logo til forsiden" class="logo"></a>
+
+            <div class="nav_ikoner">
+                <i class="material-icons" id="ikon_search">search</i>
+                <i class="material-icons" id="ikon_shoppingbag">shopping_bag</i>
+            </div>
+
+            <!------------------------------Kryds i menu----------------------------->
+            <div class="m-menu">
+                <div class="m-menu__header">
+                    <label class="m-menu__toggle" for="menu">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                            stroke-linecap="butt" stroke-linejoin="arcs">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </label>
+                    <span></span>
+                </div>
+                <!-----------------------------Tilbage pil-------------------------------->
+
+
+                <!------------------------------SEKTION 1----------------------------------->
+                <ul>
+                    <li>
+                        <label class="a-label__chevron" for="item-1">Vin</label>
+                        <input type="checkbox" id="item-1" name="item-1" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-1">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span>Vin</span>
+                            </div>
+                            <ul>
+                                <li><label>Hvid</label></li>
+                                <li>
+                                    <label><a href="kategori.html" id="a_menu">Rød</a></label>
+                                </li>
+                                <li><label>Rosé</label></li>
+                                <li><label>Hedvine</label></li>
+                                <li><label>Cold Hand Winery</label></li>
+                                <li><label>Vintilbehør</label></li>
+
+                                <div class="m-menu">
+                                    <div class="m-menu__header"></div>
+                                </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-----------------------------SEKTION 2---------------------------------->
+
+            <li>
+                <label class="a-label__chevron" for="item-2">Spiritus</label>
+                <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                <div class="m-menu">
+                    <div class="m-menu__header">
+                        <label class="m-menu__toggle" for="item-2">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                            </svg>
+                        </label>
+                        <span>Spiritus</span>
+                    </div>
+                    <ul>
+                        <li><label>Armagnac</label></li>
+                        <li><label>Bitter</label></li>
+                        <li><label>Brandy</label></li>
+                        <li><label>Calvados</label></li>
+                        <li><label>Cognac</label></li>
+                        <li><label>Gin</label></li>
+                        <li><label>Grappa</label></li>
+                        <li><label>Likør</label></li>
+                        <li><label>Rom</label></li>
+                        <li><label>Tequila</label></li>
+                        <li><label>Vodka</label></li>
+                        <li><label>Whisky</label></li>
+
+
+                        <div class="m-menu">
+                            <div class="m-menu__header"></div>
+                        </div>
+            </li>
+            </ul>
+            </div>
+
+
+            <!-------------------------------------------- SEKTION 3------------------------------------->
+            <li>
+                <label class="a-label__chevron" for="item-3">Specialiteter</label>
+                <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
+                <div class="m-menu">
+                    <div class="m-menu__header">
+                        <label class="m-menu__toggle" for="item-3">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                            </svg>
+                        </label>
+                        <span>Specialiteter</span>
+                    </div>
+                    <ul>
+                        <li><label>Chokolade</label></li>
+                        <li><label>Special øl</label></li>
+
+                        <div class="m-menu">
+                            <div class="m-menu__header"></div>
+                        </div>
+            </li>
+            </ul>
+            </div>
+
+            <!----------------------------------------------SEKTION 4---------------------------------------->
+            <li>
+                <label class="a-label__chevron" for="item-4">Gaver</label>
+                <input type="checkbox" id="item-4" name="item-4" class="m-menu__checkbox">
+                <div class="m-menu">
+                    <div class="m-menu__header">
+                        <label class="m-menu__toggle" for="item-4">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                            </svg>
+                        </label>
+                        <span>Gaver</span>
+                    </div>
+                    <ul>
+                        <li><label>Gavekurve</label></li>
+                        <li><label>Gaveindpakning</label></li>
+                        <li><label>Firmajulegaver 2022</label></li>
+
+                        <div class="m-menu">
+                            <div class="m-menu__header"></div>
+                        </div>
+            </li>
+            </ul>
+            </div>
+
+            <!---------------------------------------------SEKTION 5------------------------------------------->
+            <li>
+                <label class="a-label__chevron" for="item-5">Arrangementer</label>
+                <input type="checkbox" id="item-5" name="item-5" class="m-menu__checkbox">
+                <div class="m-menu">
+                    <div class="m-menu__header">
+                        <label class="m-menu__toggle" for="item-5">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                            </svg>
+                        </label>
+                        <span> Arrangementer</span>
+                    </div>
+                    <ul>
+                        <li><label>Smagninger</label></li>
+                        <li><label>Festen 2022</label></li>
+                        <div class="m-menu">
+                            <div class="m-menu__header"></div>
+                        </div>
+            </li>
+            </ul>
+            </div>
+
+            <!------------------------------------- SEKTION 6--------------------------------------------------->
+            <li>
+                <label class="a-label__chevron" for="item-6">Om os</label>
+                <input type="checkbox" id="item-6" name="item-6" class="m-menu__checkbox">
+                <div class="m-menu">
+                    <div class="m-menu__header">
+                        <label class="m-menu__toggle" for="item-6">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                            </svg>
+                        </label>
+                        <span> Om os</span>
+                    </div>
+                    <ul>
+                        <li><label>Butiksinformation</label></li>
+                        <li><label>Kontakt</label></li>
+                        <li><label>Handelsbetingelser</label></li>
+                        <div class="m-menu">
+                            <div class="m-menu__header"></div>
+                        </div>
+            </li>
+            </ul>
+            </div>
+        </nav>
+
+
+
+        <!------------------------------------------------------------------
+DROPDOWN MENU (https://www.w3schools.com/howto/howto_css_dropdown.asp)
+------------------------------------------------------------------->
+
+        <nav class="menu_bar">
+
+            <!-- Menu items -->
+            <div class="menu_items">
+
+                <div class="dropdown">
+                    <form action="#" class="menu_item"><button class="dropbutton">Vin</button></form>
+                    <div class="drop_punkter">
+                        <a href="#">Hvid</a>
+                        <a href="kategori.html">Rød</a>
+                        <a href="#">Rosé</a>
+                        <a href="#">Hedvine</a>
+                        <a href="#">Cold Hand Winery</a>
+                        <a href="#">Vintilbehør</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <form action="#" class="menu_item"><button class="dropbutton">Spiritus</button></form>
+                    <div class="drop_punkter">
+                        <a href="#">Armagnac</a>
+                        <a href="#">Bitter</a>
+                        <a href="#">Brandy</a>
+                        <a href="#">Calvados</a>
+                        <a href="#">Cognac</a>
+                        <a href="#">Gin</a>
+                        <a href="#">Grappa</a>
+                        <a href="#">Likør</a>
+                        <a href="#">Rom</a>
+                        <a href="#">Tequila</a>
+                        <a href="#">Vodka</a>
+                        <a href="#">Whisky</a>
+                    </div>
+                </div>
+
+                <div class="dropdown dropdown_ekstra_bue">
+                    <form action="#" class="menu_item"><button class="dropbutton">Specialiteter</button></form>
+                    <div class="drop_punkter">
+                        <a href="#">Chokolade</a>
+                        <a href="#">Special øl</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <form action="#" class="menu_item"><button class="dropbutton">Gaver</button></form>
+                    <div class="drop_punkter">
+                        <a href="#">Gavekurve</a>
+                        <a href="#">Gaveindpakning</a>
+                        <a href="#">Firmajulegaver 2022</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <form action="#" class="menu_item dropdown_ekstra_bue"><button
+                            class="dropbutton">Arrangementer</button></form>
+                    <div class="drop_punkter">
+                        <a href="#">Smagninger</a>
+                        <a href="#">Festen 2022</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <form action="#" class="menu_item"><button class="dropbutton">Om os</button></form>
+                    <div class="drop_punkter">
+                        <a href="#">Butiksinformation</a>
+                        <a href="#">Kontakt</a>
+                        <a href="#">Handelsbetingelser</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+<!------------------------------------------------------------------
+FIND OS
+------------------------------------------------------------------->
+
+    <div class="header_card">
+        <p class="header_card_find_os">
+            <i class="material-icons" id="ikon_locationon_content">location_on</i>
+            <a href="https://www.google.com/maps/place/Brdr.+Schmidt+Vinhandel/@56.1309015,10.1538207,15z/data=!4m9!1m2!2m1!1sbrdr+schmidt+vinhandel!3m5!1s0x464c401cf449969b:0xd0b5270e65a5656f!8m2!3d56.1292704!4d10.162014!15sChZicmRyIHNjaG1pZHQgdmluaGFuZGVsWhgiFmJyZHIgc2NobWlkdCB2aW5oYW5kZWySAQp3aW5lX3N0b3Jl4AEA"
+                class="header_card_find_os">Find os i Viby Centret</a>
+        </p>
+    </div>
+
+
+    <!------------------------------------------------------------------
+FORSIDEBILLEDE
+------------------------------------------------------------------->
+    <div class="forside_cover">
+        <img src="img/tonder_besk.png" alt="Vinkælder med vintønder i gyldne farver" class="forside_img">
+        <div class="forside_txt">
+            <h1 class="forside_overskrift">VELKOMMEN</h1>
+        </div>
+    </div>
+ 
+
+
+
+    <!------------------------------------------------------------------
+CONTENT
+------------------------------------------------------------------->
+
+    <section class="forside_section" id="forside_top_section">
+        <h2 class="forside_section_header" id="forside_section_top_header"> Månedens vine </h2>
+        <section class="m_vine">
+            <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/vinflaske_ub.png" alt="vin" class="f_contentimg vin_m_img">
+                    <p class="mv_navn"> DALS Rødvin</h3>
+                    <p class="mv_pris"> Pris: 550kr. </p>
+                </a>
+                <form action="produkt.html" class="vin_form vin_form_forside"> <button class="button-21 button-211 vin_form_forside" role="button">Køb </button> </form>
+             </div>
+
+             <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/vinflaske_ub.png" alt="vin" class="f_contentimg vin_m_img">
+                    <p class="mv_navn"> LOLS Rødvin</h3>
+                    <p class="mv_pris"> Pris: 79kr. </p>
+                </a>
+                <form action="produkt.html" class="vin_form vin_form_forside"> <button class="button-21 button-211 vin_form_forside" role="button">Køb </button> </form>
+             </div>
+
+             <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/vinflaske_ub.png" alt="vin" class="f_contentimg vin_m_img">
+                    <p class="mv_navn"> AARS Rødvin</h3>
+                    <p class="mv_pris"> Pris: 199kr. </p>
+                </a>
+                <form action="produkt.html" class="vin_form vin_form_forside"> <button class="button-21 button-211 vin_form_forside" role="button">Køb </button> </form>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="forside_section">
+        <img src="img/smag_besk.png" alt="smag" class="forside_section_img">
+
+        <section class="tilmeld_section">
+            <div class="tilmeld_section_div">
+                <h2 class="forside_section_header"> Portvinssmagning fredag d. 2. december </h2>
+                <p class="forside_section_p"> Vi afholder en del smagninger i vores kælder i Brdr. Schmidt Vinhandel
+                    Gladforvin.dk i Viby Centeret ved Aarhus.</p>
+            </div>
+            <button class="button-21" role="button">Tilmeld</button>
+        </section>
+    </section>
+
+
+
+    <section class="forside_section">
+        <img src="img/gavekurv_smal.png" alt="kurv" class="forside_section_img">
+        <section class="gavekurv_section">
+            <div class="tilmeld_section_div">
+                <h2 class="forside_section_header"> Få sæsonens lækre gavekurv</h2>
+                <p class="forside_section_p">Lækker gave kurv som indeholder vin, kaffe, chokolade og øl. Kan variere i
+                    forhold til billede. Hvis der skal et kort på så skriv teksten i kommentarfeltet ved bestilling.
+                    Gratis fragt i Stor Aarhus. Kan ikke sendes med post nord, kan sendes med Danske Fragtmænd over hele
+                    landet til firma adresser. hvis det er til en privat adresse er der et privatleverings gebyr. </p>
+            </div>
+            <button class="button-21" role="button">Køb</button>
+        </section>
+    </section>
+
+
+    <img src="img/alder.jpg" alt="aldersgrænse" class="alder_img">
+
+
+
+    <!------------------------------------------------------------------
+FOOTER
+------------------------------------------------------------------->
+    <footer>
+
+        <!-- FØLG OS -->
+        <div class="footer_card">
+            <h4 class="footer_card_header">Følg os</h4>
+            <a href="https://www.facebook.com/gladforvin.dk" class="footer_link"><img src="img/facebook.png"
+                    alt="Facebook logo" class="some_img"></a>
+            <a href="#" class="footer_link">Tilmeld nyhedsbrev</a>
+            <a href="#" class="footer_link">Log ind</a>
+        </div>
+
+        <!-- BUTIKSINFORMATION -->
+        <div class="footer_card">
+            <h4 class="footer_card_header">Butiksinformation</h4>
+            <!-- adresse -->
+            <p class="footer_link">
+                <i class="material-icons" id="ikon_locationon_footer">location_on</i>
+                <a href="#" class="footer_link">Viby Ringvej 10, 8260 Viby J</a>
+            </p>
+            <!-- telefon -->
+            <p class="footer_link">
+                <i class="material-icons" id="ikon_call">call</i>
+                <a href="#" class="footer_link">+45 86 14 96 44</a>
+            </p>
+            <!-- mail -->
+            <p class="footer_link">
+                <i class="material-icons" id="ikon_mail">mail</i>
+                <a href="mailto:viby@gladforvin.dk" class="footer_link">viby@gladforvin.dk</a>
+            </p>
+            <!-- om os -->
+            <a href="#" class="footer_link">Om os</a>
+
+        </div>
+
+        <!-- INFORMATION -->
+        <div class="footer_card">
+            <h4 class="footer_card_header">Information</h4>
+            <a href="#" class="footer_link">Sikker betaling</a>
+            <a href="#" class="footer_link">Handelsbetingelser</a>
+            <a href="#" class="footer_link">1855Cru</a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
