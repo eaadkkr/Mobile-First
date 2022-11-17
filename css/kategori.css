@@ -1,0 +1,120 @@
+
+/*----------- OVERSKRIFT & SORTER ---------------*/
+.overskrift_r{
+  margin-left: 2.5%;
+  padding-top: 2rem;
+}
+
+.header_link {
+    color: var(--black);
+    border: solid 1px var(--sort);
+    background-color: var(--hvid);
+    text-align: center;
+    width: 12rem;
+    margin: 0 auto;
+    }
+
+.sort_k{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sorter_underkategorier{
+    font-family: 'Baskerville Old Face', 'Century Schoolbook', serif
+}
+
+
+/*------------------- VINE OVERSIGT CONTENT -----------------------*/ 
+
+/*--------- https://www.w3schools.com/CSSREF/pr_grid-row-gap.php  --------*/ 
+.vine_oversigt {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0.7rem;
+}
+
+.vin_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.link_tag {
+  text-decoration: none;
+  display: block;
+  padding: 8px 14px; 
+  color: var(--black);
+}
+
+.vin_form {
+    padding: 5px;
+    height: 4rem;
+}
+
+.vin_div:hover{
+    color: var(--hvid); 
+    padding: 2.5%;
+}
+
+.vin_div:hover p {
+    color: var(--sort);
+}
+
+.vin_div:hover h2 {
+    color: var(--sort);
+}
+
+.vin_txt {
+    font-family: 'Baskerville Old Face', 'Century Schoolbook', serif;
+}
+
+/*-------- BUTTON KNAP  https://getcssscan.com/css-buttons-examples -- */
+.button-211{
+    font-size: 1.5rem;
+    height: 3.5rem;
+    padding: 10px 25px;
+    margin-top: 0.1px;
+    margin-right: 2.5%;
+}
+
+.alder_img{
+    padding-top: 2.5rem;
+}
+
+/*--------------- MEDIA ---------------*/ 
+/*=============================================================================================
+=========================================   TABLET   ==========================================
+=============================================================================================*/
+
+@media screen and (min-width: 900px) {
+    .vine_oversigt{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 3rem;
+        padding-top: 1rem;
+        padding-right: 7%;
+        padding-left: 7%;
+    }  
+
+}
+
+/*=============================================================================================
+========================================   COMPUTER   =========================================
+=============================================================================================*/
+@media screen and (min-width: 1200px) {
+    .vine_oversigt{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 3rem;
+        padding-top: 1rem;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    
+    .overskrift_r{
+        margin-left: 10%;
+}
+
+}

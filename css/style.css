@@ -1,0 +1,659 @@
+/* Basic reset */
+:after:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*=============================================================================================
+==========================================   MOBIL   ==========================================
+=============================================================================================*/
+
+
+/*-----------------------------------------------------------------------
+FARVER - hentes med: var(--navn)
+-----------------------------------------------------------------------*/
+:root {
+    --gron: #3B4728;
+    --guld: #DACB8D;
+    --rod: #7A1E3F;
+    --beige: rgb(242, 239, 234);
+    --hvid: #ffffff;
+    --sort: #333333;
+}
+
+
+/*-----------------------------------------------------------------------
+BODY
+-----------------------------------------------------------------------*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--beige);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Baskerville Old Face', 'Century Schoolbook', serif;
+}
+
+
+/*-----------------------------------------------------------------------
+BURGERMENU - https://alvarotrigo.com/blog/hamburger-menu-css/ (nr. 11)
+-----------------------------------------------------------------------*/
+.header_find_os {
+    display: none;
+}
+
+nav {
+    background-color: var(--gron);
+    height: 6rem;
+    padding: 0 16px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    /* fade in checked menu */
+}
+
+nav .m-menu__checkbox {
+    display: none;
+}
+
+nav label.m-menu__toggle {
+    cursor: pointer;
+}
+
+nav .m-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 450px;
+    width: calc(100vw - 30px);
+    height: 100%;
+    -moz-transform: translate3d(-450px, 0, 0);
+    -o-transform: translate3d(-450px, 0, 0);
+    -ms-transform: translate3d(-450px, 0, 0);
+    -webkit-transform: translate3d(-450px, 0, 0);
+    transform: translate3d(-450px, 0, 0);
+    -moz-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    -webkit-transition: transform 0.35s;
+    transition: transform 0.35s;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--hvid);
+}
+
+
+nav .m-menu__overlay {
+    background-color: rgba(103, 103, 103, 0.5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+}
+
+nav .m-menu__header {
+    padding: 0 16px;
+    height: 50px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid var(--hvid);
+}
+
+nav .m-menu__header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+nav .m-menu .m-menu {
+    -moz-transform: translate3d(480px, 0, 0);
+    -o-transform: translate3d(480px, 0, 0);
+    -ms-transform: translate3d(480px, 0, 0);
+    -webkit-transform: translate3d(480px, 0, 0);
+    transform: translate3d(480px, 0, 0);
+}
+
+nav .m-menu ul {
+    height: 100%;
+    overflow-y: auto;
+}
+
+nav .m-menu ul li a,
+nav .m-menu ul li label {
+    display: block;
+    text-align: left;
+    padding: 0 15px;
+    line-height: 47px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--hvid);
+    position: relative;
+}
+
+#a_menu {
+    padding-left: 0px
+}
+
+
+nav .m-menu ul li label.a-label__chevron::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-color: #333;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -5px;
+    right: 16px;
+}
+
+nav .m-menu ul li .-invisible {
+    border-bottom: 0;
+}
+
+nav .m-menu .m-menu label.m-menu__toggle {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    border-bottom: 0;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+nav .m-menu__checkbox:checked~.m-menu__overlay {
+    display: block;
+}
+
+nav .m-menu__checkbox:checked~.m-menu {
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+svg {
+    stroke: var(--guld);
+}
+
+/*--------------------------------------------------------------
+DROPDOWN MENU (skal skjules på mobil)
+--------------------------------------------------------------*/
+.menu_items {
+    display: none;
+}
+
+.menu_bar {
+    height: 0px;
+}
+
+
+/*--------------------------------------------------------------
+HEADER EKSKLUSIV MENUER
+--------------------------------------------------------------*/
+
+.logo {
+    margin: 0;
+    padding-top: 0%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_card_find_os {
+    text-decoration: none;
+    font-style: italic;
+    color: var(--sort);
+}
+
+.header_card_find_os :hover{
+    color: var(--guld);
+}
+
+
+/*--------------------------------------------------------------
+FORSIDEBILLEDE MED TEKST
+--------------------------------------------------------------*/
+.forside_img {
+    display: block;
+    width: 100%;
+    min-height: 7rem;
+}
+
+.forside_txt {
+    position: relative;
+    width: 100%;
+    bottom: 7rem;
+    color: var(--guld);
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+}
+
+
+/*--------------------------------------------------------------
+CONTENT
+--------------------------------------------------------------*/
+
+.forside_section {
+    background-color: var(--hvid);
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2.5%;
+    border: solid 1px var(--sort);
+    border-radius: 20px;
+}
+
+#forside_top_section {
+    margin-top: -5rem;
+}
+
+.forside_section_header {
+    padding-left: 2.5%;
+    padding-bottom: 2.5%;
+    margin-block-end: 0px;
+}
+
+#forside_section_top_header {
+    margin-top: 0px;
+}
+
+#forside_top_section {
+    background-image: url("../img/guld_blade.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.m_vine {
+    display: flex;
+    margin-left: 0px;
+    padding-bottom: 2.5%;
+}
+
+.mv_row {
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+
+.mv_link {
+    text-decoration: none;
+    color: var(--sort);
+}
+
+.mv_pris {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.mv_navn {
+    font-family: 'Baskerville Old Face', 'Century Schoolbook', serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.f_contentimg {
+    width: 100%;
+    display: block;
+
+}
+
+.tilmeld_section, .gavekurv_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.forside_section_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.forside_section_p {
+    display: none;
+}
+
+
+/*------- BUTTON: https://getcssscan.com/css-buttons-examples også brugt i kategori.css samt produkt.css -------*/
+
+.button-21 {
+    align-items: center;
+    appearance: none;
+    background-color: var(--rod);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 20px;
+    border: none;
+    box-sizing: border-box;
+    color: var(--hvid);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.5rem;
+    height: 3rem;
+    justify-content: center;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    padding: 10px 25px;
+    /* padding i selve knappen */
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.button-21:hover {
+    background-color: var(--guld);
+    color: var(--sort);
+    border: none;
+}
+
+/*-----------------------------------------------------------------------
+ALDERSBEGRÆNSNING BILLEDE
+-----------------------------------------------------------------------*/
+.alder_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+/*-----------------------------------------------------------------------
+FOOTER
+-----------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+    background-color: var(--gron);
+}
+
+.footer_card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.footer_card_header {
+    color: var(--guld);
+    padding: 10px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.some_img {
+    width: 10%;
+}
+
+/* alle ikoner skal være guld (virker ikke med class, så de har hver deres id) */
+#ikon_search,
+#ikon_shoppingbag,
+#ikon_locationon_footer,
+#ikon_locationon_top,
+#ikon_locationon_content,
+#ikon_mail,
+#ikon_call {
+    color: var(--guld);
+    padding-left: 5px;
+}
+
+
+.footer_link {
+    color: var(--hvid);
+    text-decoration: none;
+    padding: 5px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.footer_link:hover {
+    color: var(--guld);
+}
+
+
+/*=============================================================================================
+=========================================   TABLET   ==========================================
+=============================================================================================*/
+
+@media screen and (min-width: 900px) {
+
+    #forside_top_section {
+        background-image: url("../img/guld_druer_gen.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .forside_section {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+    }
+
+    .forside_section_p {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2.5%;
+    }
+
+    .vin_m_img {
+        padding-left: 20%;
+        padding-right: 20%;
+        width: 60%;
+    }
+
+
+    /* ALDER BILLEDE */
+    .alder_img {
+        width: 40%;
+    }
+
+
+    /*-----------------------------------------------------------
+FOOTER
+------------------------------------------------------------*/
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+
+    }
+
+    .footer_card {
+        width: 16rem;
+    }
+}
+
+/*=============================================================================================
+========================================   COMPUTER   =========================================
+=============================================================================================*/
+
+@media screen and (min-width: 1200px) {
+
+    /*-----------------------------------------------------
+HEADER
+-----------------------------------------------------*/
+    .header_find_os {
+        display: flex;
+    }
+
+    .header_find_os_tekst {
+        text-decoration: none;
+        color: var(--guld);
+        font-style: italic;
+    }
+
+    .header_find_os_tekst:hover {
+        text-decoration: underline;
+    }
+
+    .header_card {
+        display: none;
+    }
+
+    .logo {
+        padding-right: 8%;
+    }
+
+    /*-----------------------------------------------------
+DOPDOWN MENUBAR
+-----------------------------------------------------*/
+    .menu_bar {
+        background-color: var(--gron);
+        height: 3rem;
+    }
+
+    .menu_items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu_item {
+        text-decoration: none;
+        color: var(--guld);
+        padding-right: 1.8rem;
+    }
+
+    .menu_item:hover {
+        color: var(--gron);
+    }
+
+
+    /* DROP DOWN */
+
+    .dropbutton {
+        background-color: var(--gron);
+        color: var(--guld);
+        padding: 8px;
+        font-size: 1.15rem;
+        border: none;
+    }
+
+    .dropbutton:hover {
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        color: var(--guld);
+    }
+
+    .drop_punkter {
+        display: none;
+        position: absolute;
+        background-color: var(--gron);
+        min-width: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .drop_punkter a {
+        color: var(--guld);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .drop_punkter a:hover {
+        /*hover på dropdown punkterne*/
+        background-color: var(--guld);
+        color: var(--gron);
+    }
+
+    .dropdown:hover .drop_punkter {
+        display: block;
+        /*punkterne skal stå under hinanden*/
+    }
+
+    .dropdown:hover .dropbutton {
+        /*hover på menupunktet*/
+        color: var(--gron);
+        background-color: var(--guld);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .dropdown_ekstra_bue:hover .dropbutton {
+        border-bottom-right-radius: 10px;
+    }
+
+    .active_dropdown {
+        background-color: var(--guld);
+        color: var(--gron);
+        border-radius: 10px;
+    }
+
+    .m-menu__toggle {
+        /* burgermenu skal ikke vises på pc */
+        display: none;
+    }
+
+
+    /*-----------------------------------------------------
+FORSIDE COVERBILLEDE
+-----------------------------------------------------*/
+    .forside_txt {
+        bottom: 9rem;
+        font-size: 2rem;
+    }
+
+
+    /*-----------------------------------------------------
+CONTENT
+-----------------------------------------------------*/
+
+    /* ALDER BILLEDE */
+    .alder_img {
+        width: 30%;
+    }
+
+
+}
